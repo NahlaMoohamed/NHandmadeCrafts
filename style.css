@@ -18,12 +18,12 @@ h1{
     color: #bf5521 !important;
     border-radius: 5px;
     display:inline-block;
-    font-size: 42px !important;
+    font-size: 38px !important;
 }               
 body
 {
     font-weight: bold !important;
-    font-family: 'Tangerine''Times New Romans', serif !important;
+    font-family: 'Garamond' !important;
     background: rgba(233, 219, 170,0.6) !important;
 }
 .navbar.navbar-default
