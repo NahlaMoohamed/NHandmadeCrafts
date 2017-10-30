@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 16, 2017, 9:20:07 AM
+    Author     : Nahla
+*/
+
+
+.navbar-text, a{
+    color: #bf5521 !important;
+}
+h1{
+    font-weight: bold !important;
+    line-height: 1.1 !important;
+    color: #bf5521 !important;
+    border-radius: 5px;
+    display:inline-block;
+    font-size: 42px !important;
+}               
+body
+{
+    font-weight: bold !important;
+    font-family: 'Tangerine', serif !important;
+    background: rgba(233, 219, 170,0.6) !important;
+}
+.navbar.navbar-default
+{
+    background: rgba(233, 219, 170,0.6) !important;
+}
+.navbar.navbar-default > .container{
+    background-color: transparent;
+}
+.navbar{
+    margin-top: 5px;
+}
+.navbar-nav{
+    
+    border-radius: 5px;
+    border: 1px solid #bf5521 !important;
+}
+.nav.navbar-nav.navbar-right > li a:hover {
+    border-radius: 5px;
+    background-color:rgb(229, 213, 158);
+}
+.pagination > li > a, .pagination > li > span{
+    color:#bf5521 !important;
+    background-color: #e9dbaa !important;  
+    border: 1px solid #bf5521 !important;
+}
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+.container{
+    background: #e9dbaa;
+}
+
+.footer {
+    background: transparent !important;
+}
+.footer a {
+    color: #bf5521;
+    font-size: 20px;
+    padding: 10px;
+    transition: all .5s ease;
+}
+.footer a:hover {
+    color: white;
+}
