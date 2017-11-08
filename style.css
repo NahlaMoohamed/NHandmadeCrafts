@@ -18,7 +18,13 @@ h1{
     border-radius: 5px;
     display:inline-block;
     font-size: 42px !important;
-}               
+}           
+p{
+        color: #bf5521 !important;
+        font-size: 32px !important;
+        display: inline-block !important;
+        padding:10px;
+    }    
 body
 {
     font-weight: bold !important;
