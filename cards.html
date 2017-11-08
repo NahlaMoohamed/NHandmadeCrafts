@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8"> 
     <title>N Handmade Crafts</title>
@@ -27,16 +27,15 @@
             <div class="col-sm-4-4">
                 <ul class="pagination pagination-lg">
                   <li><a style="font-size: 32px;" href="index.html">Home</a></li>
-                  <li><a style="font-size: 32px;" href="cards.jsp">Cards</a></li>
-                  <li><a style="font-size: 32px;" href="garlands.jsp">Garlands</a></li>
-                  <li><a style="font-size: 32px;" href="other.jsp">Others</a></li>
+                  <li><a style="font-size: 32px;" href="garlands.html">Garlands</a></li>
+                  <li><a style="font-size: 32px;" href="frames.html">Frames</a></li>
+                  <li><a style="font-size: 32px;" href="other.html">Others</a></li>
                 </ul>
             </div>
         </div>	
     </div> 
 </div>
 </header>
-
 <div class="container" id="imageContainer">
 </div>
 <div class="text-center">
@@ -68,7 +67,7 @@
             img.className = "img-responsive center-block";
             if(index <= imageSize)
             {
-                var temp = "frames/frame"+index+'.jpg';
+                var temp = "cards/card"+index+'.jpg';
                 img.src = temp;
                 col.appendChild(img);
                 index++;
@@ -81,11 +80,11 @@
 </div>
 </div>
 <footer class="footer bg-6">
-  <div class="container text-center">
-    <a href="https://www.facebook.com/nhandmadecraft/"><i class="fa fa-facebook"></i></a>
-    <a href="#"><i class="fa fa-instagram"></i></a>
-    <a href="about.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-  </div>
+    <div class="container text-center">
+      <a href="https://www.facebook.com/nhandmadecraft/"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="about.html"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+    </div>
 </footer>
 </body>
 </html>

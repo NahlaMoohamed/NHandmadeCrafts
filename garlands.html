@@ -11,6 +11,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
 </head>
+<script type="">
+    function show_image(src, width, height, alt) {
+    var img = document.createElement("img");
+    img.src = src;
+    img.width = width;
+    img.height = height;
+    img.alt = alt;
+    document.body.appendChild(img);
+}
+</script>
 <body>
 <header>
 <div class="container" style="margin-bottom: 5px; margin-top: 5px;">
@@ -27,9 +37,9 @@
             <div class="col-sm-4-4">
                 <ul class="pagination pagination-lg">
                   <li><a style="font-size: 32px;" href="index.html">Home</a></li>
-                  <li><a style="font-size: 32px;" href="cards.jsp">Cards</a></li>
-                  <li><a style="font-size: 32px;" href="garlands.jsp">Garlands</a></li>
-                  <li><a style="font-size: 32px;" href="other.jsp">Others</a></li>
+                  <li><a style="font-size: 32px;" href="cards.html">Cards</a></li>
+                  <li><a style="font-size: 32px;" href="frames.html">Frames</a></li>
+                  <li><a style="font-size: 32px;" href="other.html">Others</a></li>
                 </ul>
             </div>
         </div>	
@@ -38,6 +48,7 @@
 </header>
 
 <div class="container" id="imageContainer">
+
 </div>
 <div class="text-center">
     <script>
@@ -68,7 +79,7 @@
             img.className = "img-responsive center-block";
             if(index <= imageSize)
             {
-                var temp = "frames/frame"+index+'.jpg';
+                var temp = "garlands/garland"+index+'.jpg';
                 img.src = temp;
                 col.appendChild(img);
                 index++;
