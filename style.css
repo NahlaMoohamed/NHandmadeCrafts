@@ -23,7 +23,7 @@ h1{
 body
 {
     font-weight: bold !important;
-    font-family: 'Tangerine' !important;
+    font-family: 'Tangerine','Italianno' !important;
     background: rgba(233, 219, 170,0.6) !important;
 }
 .navbar.navbar-default
