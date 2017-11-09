@@ -8,6 +8,7 @@ and open the template in the editor.
     Author     : Nahla
 */
 
+/* fonts colors*/
 .navbar-text, a{
     color: #D4A5A5 !important;
 }
@@ -24,7 +25,8 @@ p{
         font-size: 32px !important;
         display: inline-block !important;
         padding:10px;
-    }    
+    } 
+  
 body
 {
     font-weight: bold !important;
@@ -65,8 +67,7 @@ body
 .navbar{
     margin-top: 2px;
 }
-.navbar-nav{
-    
+.navbar-nav{   
     border-radius: 5px;
     border: 1px solid #D4A5A5 !important;
 }
