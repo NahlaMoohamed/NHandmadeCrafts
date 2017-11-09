@@ -53,7 +53,7 @@
     {
         loop = Math.ceil(imageSize/3)+1;
     }
-            //<img class=""img-responsive center-block"" src=\"" + baseUrl + "garland"+ index + "\"/
+
     var container = document.getElementById("imageContainer");
     container.className ="container text-center";
     var table = document.createElement("div");
@@ -66,17 +66,53 @@
         for(var j=0; j<3;j++)
         {
             var col = document.createElement("div");
-            col.className = "col-md-4";
+            col.className = "col-md-4 hovereffect";
             var photo = document.createElement("photo"),img = new Image();
             img.className = "img-responsive center-block";
             if(index <= imageSize)
             {
                 var temp = "cards/card"+index+'.jpg';
                 img.src = temp;
+                var imageId = "myImg"+index;
+                img.id = imageId;
                 col.appendChild(img);
                 index++;
                 row.appendChild(col);
                 table.appendChild(row);
+
+                var myModal = document.createElement("div");
+                myModal.className = "modal";
+                myModal.id = "myModal"+index;
+                var span = document.createElement("span");
+                span.className = "close";
+                span.textContent = "X";
+                var image = new Image();
+                image.className = "modal-content";
+                var modalImageId = "img"+ index;
+                image.id = modalImageId;
+                myModal.appendChild(span);
+                myModal.appendChild(image);
+                table.appendChild(myModal);
+                // Get the modal
+                var modal = document.getElementById('myModal'+index);
+
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                var img1 = document.getElementById(imageId);
+                var modalImg = document.getElementById(modalImageId);
+                img1.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                }
+
+                // Get the <span> element that closes the modal
+                var spans = document.getElementsByClassName("close");
+                for ( var i = 0; i < spans.length; i++ ) {
+                  spans[i].addEventListener('click', function(event) {
+                    event.preventDefault();
+                    console.log("clicked", this);
+                    modal.style.display = "none";
+                  });
+                }
             }
         }
     }
