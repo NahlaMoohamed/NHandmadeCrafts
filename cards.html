@@ -24,7 +24,7 @@
 <nav class="navbar text-center" >
   <div class="container">
     <div class="navbar-header">
-        <img width="70" height="70" class="img-responsive center-block" src="logo.jpg" style = "margin-left:5px;margin-top: 5px;margin-bottom: 5px;"/>
+        <img width="80" height="80" class="img-responsive center-block" src="logo1.gif" style = "margin-left:5px;margin-top: 5px;margin-bottom: 5px;"/>
     </div>
     <div class="navbar-header">
         <h1 style="text-align: left !important;">N Handmade Crafts</h1>
@@ -44,7 +44,7 @@
 </div>
 <div class="text-center">
     <script>
-    var imageSize = 3,index = 1,loop = 0;
+    var imageSize = 7,index = 1,loop = 0;
     if((imageSize%3) == 0)
     {
         loop = imageSize/3;
@@ -57,7 +57,7 @@
     var container = document.getElementById("imageContainer");
     container.className ="container text-center";
     var table = document.createElement("div");
-    table.style = "border: 1px solid #bf5521 !important;border-radius: 5px;padding: 5px;margin: 5px;";
+    table.id = "imageBorder";
     document.getElementById("imageContainer").appendChild(table);
     for (var i=0;i < loop; i++) 
     {

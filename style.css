@@ -9,18 +9,18 @@ and open the template in the editor.
 */
 
 .navbar-text, a{
-    color: #bf5521 !important;
+    color: #D4A5A5 !important;
 }
 h1{
     font-weight: bold !important;
     line-height: 1.1 !important;
-    color: #bf5521 !important;
+    color:#D4A5A5 !important;
     border-radius: 5px;
     display:inline-block;
     font-size: 42px !important;
 }           
 p{
-        color: #bf5521 !important;
+        color: #D4A5A5 !important;
         font-size: 32px !important;
         display: inline-block !important;
         padding:10px;
@@ -29,45 +29,73 @@ body
 {
     font-weight: bold !important;
     font-family: 'Tangerine', 'Tw Cen MT' !important;
-    background: rgba(233, 219, 170,0.6) !important;
+    background: #F9FFEA !important;
 }
+#headerStyle
+{
+    padding:5px !important ;
+    border: 1px solid #D4A5A5 !important;
+}
+#imageBorder
+{
+    border: 1px solid #D4A5A5 !important;
+    border-radius: 5px;
+    padding: 5px;margin: 1%;
+}
+.btn.btn-default {
+    margin-top: 7px;
+    font-weight: bold;
+    background-color:#D4A5A5 !important; 
+    color:#F9FFEA !important;
+    border-radius: 8px;
+    font-size: 32px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
 .navbar.navbar-default
 {
-    background: rgba(233, 219, 170,0.6) !important;
+    background: #FFECDA !important;
 }
 .navbar.navbar-default > .container{
     background-color: transparent;
 }
 .navbar{
-    margin-top: 5px;
+    margin-top: 2px;
 }
 .navbar-nav{
     
     border-radius: 5px;
-    border: 1px solid #bf5521 !important;
+    border: 1px solid #D4A5A5 !important;
 }
 .nav.navbar-nav.navbar-right > li a:hover {
     border-radius: 5px;
-    background-color:rgb(229, 213, 158);
+    background-color:rgba(249, 255, 234,0.2);
 }
 .pagination > li > a, .pagination > li > span{
-    color:#bf5521 !important;
-    background-color: #e9dbaa !important;  
-    border: 1px solid #bf5521 !important;
+    color:#F9FFEA !important;
+    background-color: #FFECDA !important;  
+    border: 1px solid #FFECDA !important;
 }
 .button:hover {
-    background-color: #4CAF50; /* Green */
+    background-color: #D4A5A5;
     color: white;
 }
 .container{
-    background: #e9dbaa;
+    background: #FFECDA;
+    border-radius: 5px;
 }
 
 .footer {
     background: transparent !important;
 }
+.fa {
+    padding-top: 5px;
+}
 .footer a {
-    color: #bf5521;
+    color: #D4A5A5;
     font-size: 20px;
     padding: 10px;
     transition: all .5s ease;
@@ -135,7 +163,7 @@ body
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: #D4A5A5;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
@@ -148,3 +176,6 @@ body
     cursor: pointer;
 }
 
+img, .img-responsive{
+    border-radius: 5px;
+}
