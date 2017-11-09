@@ -17,6 +17,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
 </head>
 <body>
@@ -33,18 +34,19 @@
     <ul class="nav navbar-nav navbar-right">
         <li><a style="font-size: 32px;" href="https://nahlamoohamed.github.io/NahlaMohamed.github.io/index.html">Home</a></li>
         <li><a style="font-size: 32px;" href="https://nahlamoohamed.github.io/NahlaMohamed.github.io/cards.html">Cards</a></li>
-        <li><a style="font-size: 32px;" href="https://nahlamoohamed.github.io/NahlaMohamed.github.io/garlands.html">Garlands</a></li>
+        <li><a style="font-size: 32px;" href="https://nahlamoohamed.github.io/NahlaMohamed.github.io/frames.html">Frames</a></li>
         <li><a style="font-size: 32px;" href="https://nahlamoohamed.github.io/NahlaMohamed.github.io/other.html">Others</a></li>
     </ul>       
     </div>
   </div>
 </nav>
 </header>
-<div class="container" id="imageContainer">
+
+<div class="w3-container" id="imageContainer">
 </div>
 <div class="text-center">
     <script>
-    var imageSize = 3,index = 1,loop = 0;
+    var imageSize = 4,index = 1,loop = 0.0;
     if((imageSize%3) == 0)
     {
         loop = imageSize/3;
@@ -59,60 +61,49 @@
     var table = document.createElement("div");
     table.style = "border: 1px solid #bf5521 !important;border-radius: 5px;padding: 5px;margin: 5px;";
     document.getElementById("imageContainer").appendChild(table);
-    for (var i=0;i < loop; i++) 
+    for (var i=0;i<loop; i++) 
     {
         var row = document.createElement("div")
-        row.className = "row";
+        row.className = "w3-row-padding";
         for(var j=0; j<3;j++)
         {
             var col = document.createElement("div");
-            col.className = "col-md-4 hovereffect";
-            var img = new Image();
-            img.className = "img-responsive center-block";
+            col.className = "w3-container w3-third";
+            var photo = document.createElement("photo"),img = new Image();
+            img.className = "w3-hover-opacity img-responsive center-block";
+            img.onClick(this);
             if(index <= imageSize)
             {
-                var temp = "frames/frame"+index+'.jpg';
+                var temp = "garlands/garland"+index+'.jpg';
                 img.src = temp;
                 var imageId = "myImg"+index;
                 img.id = imageId;
                 col.appendChild(img);
-                index++;
                 row.appendChild(col);
                 table.appendChild(row);
 
                 var myModal = document.createElement("div");
-                myModal.className = "modal";
-                myModal.id = "myModal"+index;
+                myModal.className = "w3-modal";
+                myModal.id = "modal01";
                 var span = document.createElement("span");
-                span.className = "close";
+                span.className = "w3-button w3-hover-red w3-xlarge w3-display-topright";
                 span.textContent = "X";
                 var image = new Image();
-                image.className = "modal-content";
+                image.className = "w3-modal-content w3-animate-zoom";
                 var modalImageId = "img"+ index;
                 image.id = modalImageId;
                 myModal.appendChild(span);
                 myModal.appendChild(image);
                 table.appendChild(myModal);
-                // Get the modal
-                var modal = document.getElementById('myModal'+index);
-
-                // Get the image and insert it inside the modal - use its "alt" text as a caption
-                var img1 = document.getElementById(imageId);
-                var modalImg = document.getElementById(modalImageId);
-                img1.onclick = function(){
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
+                
+                function onClick(element) {
+                  document.getElementById(modalImageId).src = element.src;
+                  document.getElementById("modal01").style.display = "block";
                 }
-
-                // Get the <span> element that closes the modal
-                var spans = document.getElementsByClassName("close");
-                for ( var k = 0; k < spans.length; k++ ) {
-                  spans[k].addEventListener('click', function(event) {
-                    event.preventDefault();
-                    console.log("clicked", this);
-                    modal.style.display = "none";
-                  });
-                }
+                index++;
+            }
+            else{
+                break;
             }
         }
     }
