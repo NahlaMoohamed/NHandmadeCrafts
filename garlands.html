@@ -45,14 +45,14 @@
 </div>
 <div class="text-center">
     <script>
-    var imageSize = 3,index = 1,loop = 0;
+    var imageSize = 4,index = 1,loop = 0.0;
     if((imageSize%3) == 0)
     {
         loop = imageSize/3;
     }
     else
     {
-        loop = Math.ceil(imageSize/3)+1;
+        loop = Math.floor(imageSize/3)+1;
     }
 
     var container = document.getElementById("imageContainer");
@@ -60,7 +60,7 @@
     var table = document.createElement("div");
     table.style = "border: 1px solid #bf5521 !important;border-radius: 5px;padding: 5px;margin: 5px;";
     document.getElementById("imageContainer").appendChild(table);
-    for (var i=0, len = loop; i < len; ++i) 
+    for (var i=0;i<loop; i++) 
     {
         var row = document.createElement("div")
         row.className = "row";
@@ -77,7 +77,6 @@
                 var imageId = "myImg"+index;
                 img.id = imageId;
                 col.appendChild(img);
-                index++;
                 row.appendChild(col);
                 table.appendChild(row);
 
@@ -107,13 +106,17 @@
 
                 // Get the <span> element that closes the modal
                 var spans = document.getElementsByClassName("close");
-                for ( var i = 0; i < spans.length; i++ ) {
-                  spans[i].addEventListener('click', function(event) {
+                for ( var k = 0; k < spans.length; k++ ) {
+                  spans[k].addEventListener('click', function(event) {
                     event.preventDefault();
                     console.log("clicked", this);
                     modal.style.display = "none";
                   });
                 }
+                index++;
+            }
+            else{
+                break;
             }
         }
     }
