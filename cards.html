@@ -21,10 +21,10 @@
 </head>
 <body>
 <header>
-<nav class="navbar text-center" >
+<nav class="navbar text-center" id="header_container">
   <div class="container">
     <div class="navbar-header">
-        <img width="80" height="80" class="img-responsive center-block" src="logo1.gif" style = "margin-left:5px;margin-top: 5px;margin-bottom: 5px;"/>
+        <img width="80" height="80" class="img-responsive center-block" src="logo1.gif" id="logo"/>
     </div>
     <div class="navbar-header">
         <h1 style="text-align: left !important;">N Handmade Crafts</h1>
@@ -67,6 +67,12 @@
         {
             var col = document.createElement("div");
             col.className = "col-md-4 hovereffect";
+            //var frontClass = document.createElement("div");
+            //frontClass.className = "front";
+            //var backClass = document.createElement("div");
+            //backClass.className = "back";
+            //var backImg = new Image();
+            //backImg.className = "img-responsive center-block";
             var img = new Image();
             img.className = "img-responsive center-block";
             if(index <= imageSize)
@@ -76,6 +82,11 @@
                 var imageId = "myImg"+index;
                 img.id = imageId;
                 col.appendChild(img);
+                //frontClass.appendChild(img);
+                //col.appendChild(frontClass);
+                //var temp2 = "cards/cardback"+index+'.jpg';
+                //backImg.src = temp;
+                //col.appendChild(backClass);
                 index++;
                 row.appendChild(col);
                 table.appendChild(row);

@@ -7,59 +7,36 @@ and open the template in the editor.
     Created on : Oct 16, 2017, 9:20:07 AM
     Author     : Nahla
 */
-
-/* fonts colors*/
-.navbar-text, a{
-    color: #D4A5A5 !important;
-}
-h1{
-    font-weight: bold !important;
-    line-height: 1.1 !important;
-    color:#D4A5A5 !important;
-    border-radius: 5px;
-    display:inline-block;
-    font-size: 42px !important;
-}           
-p{
-        color: #D4A5A5 !important;
-        font-size: 32px !important;
-        display: inline-block !important;
-        padding:10px;
-    } 
-  
 body
 {
     font-weight: bold !important;
-    font-family: 'Tangerine', 'Tw Cen MT' !important;
+    font-family: 'Tangerine', 'Tw Cen MT',serif !important;
     background: #F9FFEA !important;
 }
-#headerStyle
+/* navbar */
+#logo
 {
-    padding:5px !important ;
-    border: 1px solid #D4A5A5 !important;
+    margin-left:5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-#imageBorder
+#header_container
 {
-    border: 1px solid #D4A5A5 !important;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.navbar-nav{   
     border-radius: 5px;
-    padding: 5px;margin: 1%;
+    border: 1px solid #D4A5A5 !important;
 }
-.btn.btn-default {
-    margin-top: 7px;
-    font-weight: bold;
-    background-color:#D4A5A5 !important; 
-    color:#F9FFEA !important;
-    border-radius: 8px;
-    font-size: 32px;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-
 .navbar.navbar-default
 {
     background: #FFECDA !important;
+}
+.pagination > li > a, .pagination > li > span{
+    color:#F9FFEA !important;
+    background-color: #FFECDA !important;  
+    border: 1px solid #FFECDA !important;
 }
 .navbar.navbar-default > .container{
     background-color: transparent;
@@ -67,43 +44,77 @@ body
 .navbar{
     margin-top: 2px;
 }
-.navbar-nav{   
-    border-radius: 5px;
-    border: 1px solid #D4A5A5 !important;
-}
 .nav.navbar-nav.navbar-right > li a:hover {
     border-radius: 5px;
     background-color:rgba(249, 255, 234,0.2);
 }
-.pagination > li > a, .pagination > li > span{
-    color:#F9FFEA !important;
-    background-color: #FFECDA !important;  
-    border: 1px solid #FFECDA !important;
-}
-.button:hover {
-    background-color: #D4A5A5;
-    color: white;
-}
-.container{
-    background: #FFECDA;
-    border-radius: 5px;
-}
 
+/* Footer */
 .footer {
     background: transparent !important;
 }
 .fa {
     padding-top: 5px;
 }
+
+.footer a:hover {
+    color: white;
+}
 .footer a {
-    color: #D4A5A5;
     font-size: 20px;
     padding: 10px;
     transition: all .5s ease;
 }
-.footer a:hover {
+/* Fonts */
+.navbar-text, a, h1,p, .close , .footer a{
+    color: #D4A5A5 !important;
+}
+h1{
+    font-weight: bold !important;
+    line-height: 1.1 !important;
+    border-radius: 5px;
+    display:inline-block;
+    font-size: 42px !important;
+}           
+p{
+    font-size: 32px !important;
+    display: inline-block !important;
+    padding:10px;
+} 
+
+#headerStyle
+{
+    padding:5px !important ;
+    border: 1px solid #D4A5A5 !important;
+}
+
+#imageBorder
+{
+    border: 1px solid #D4A5A5 !important;
+    border-radius: 5px;
+    padding: 5px;margin: 1%;
+}
+
+.button:hover {
+    background-color: #D4A5A5;
     color: white;
 }
+
+.btn.btn-default {
+    margin-top: 7px;
+    font-weight: bold;
+    background-color:#D4A5A5 !important; 
+    color:#F9FFEA !important;
+    border-radius: 8px;
+    font-size: 32px;
+    padding: 2px 15px;
+}
+
+.container{
+    background: #FFECDA;
+    border-radius: 5px;
+}
+
 .row > .col-md-4 > img{
     padding-top:5px;
     padding-bottom:5px;
@@ -119,8 +130,6 @@ body
     text-align:center;
     cursor:default;
 }
-
-
 .hovereffect:hover img 
 {
     opacity: 0.7;
@@ -149,27 +158,14 @@ body
     height:100%;
 }
 
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-}
-
-/* The Close Button */
 .close {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #D4A5A5;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
 }
-
 .close:hover,
 .close:focus {
     color: #bbb;
@@ -180,3 +176,59 @@ body
 img, .img-responsive{
     border-radius: 5px;
 }
+
+/* Flip photo */
+.flipCard{
+    position: relative;
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+.flipCard:hover {
+  transform: rotatey(180deg);
+  -webkit-transform: rotatey(180deg);
+  -moz-transform: rotatey(180deg);
+  -ms-transform: rotatey(180deg);
+  -o-transform: rotatey(180deg);
+}
+
+.flipCard .front, .flipCard .back {
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+}
+
+.flipCard .front img, .flipCard .back img{
+    margin: 0;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-radius: 5px;
+}
+
+.flipCard .back {
+    padding-left: 15px;
+    display: block;
+  transform: rotatey(180deg);
+  -webkit-transform: rotatey(180deg);
+  -moz-transform: rotatey(180deg);
+  -ms-transform: rotatey(180deg);
+  -o-transform: rotatey(180deg);
+}
+
+
+/*
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+*/
