@@ -44,7 +44,7 @@
 </div>
 <div class="text-center">
     <script>
-    var imageSize = 7,index = 1,loop = 0;
+    var imageSize = 13,index = 1,loop = 0;
     if((imageSize%3) == 0)
     {
         loop = imageSize/3;
@@ -66,28 +66,32 @@
         for(var j=0; j<3;j++)
         {
             var col = document.createElement("div");
-            col.className = "col-md-4 hovereffect";
-            //var frontClass = document.createElement("div");
-            //frontClass.className = "front";
-            //var backClass = document.createElement("div");
-            //backClass.className = "back";
-            //var backImg = new Image();
-            //backImg.className = "img-responsive center-block";
-            var img = new Image();
+            col.className = "col-md-4 flipCard hoverflipeffect center-block";
+            var front = document.createElement("div");
+            front.className = "front";
+            var back = document.createElement("div");
+            back.className = "back";
+
+            var img = new Image(); //front img
             img.className = "img-responsive center-block";
+
+            var backImg = new Image();
+            backImg.className = "img-responsive center-block";
+
             if(index <= imageSize)
             {
                 var temp = "cards/card"+index+'.jpg';
                 img.src = temp;
                 var imageId = "myImg"+index;
                 img.id = imageId;
-                col.appendChild(img);
-                //frontClass.appendChild(img);
-                //col.appendChild(frontClass);
-                //var temp2 = "cards/cardback"+index+'.jpg';
-                //backImg.src = temp;
-                //col.appendChild(backClass);
-                index++;
+                front.appendChild(img);
+                var temp2 = "cards/cardback"+index+'.jpg';
+                backImg.src = temp2;
+                var backimageId = "backImg"+index;
+                backImg.id = backimageId;
+                back.appendChild(backImg);
+                col.appendChild(front);
+                col.appendChild(back);
                 row.appendChild(col);
                 table.appendChild(row);
 
@@ -104,17 +108,17 @@
                 myModal.appendChild(span);
                 myModal.appendChild(image);
                 table.appendChild(myModal);
+
                 // Get the modal
                 var modal = document.getElementById('myModal'+index);
-
                 // Get the image and insert it inside the modal - use its "alt" text as a caption
-                var img1 = document.getElementById(imageId);
+                var img1 = document.getElementById(backimageId);
                 var modalImg = document.getElementById(modalImageId);
                 img1.onclick = function(){
                     modal.style.display = "block";
-                    modalImg.src = this.src;
+                    var t =  this.src;
+                    modalImg.src = t.replace("cardback", "card");
                 }
-
                 // Get the <span> element that closes the modal
                 var spans = document.getElementsByClassName("close");
                 for ( var k = 0; k < spans.length; k++ ) {
@@ -124,6 +128,7 @@
                     modal.style.display = "none";
                   });
                 }
+                index++;
             }
         }
     }
