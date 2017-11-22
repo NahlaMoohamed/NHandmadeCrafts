@@ -266,3 +266,23 @@ img, .img-responsive{
     padding-top: 0;
   }
 }
+.nav-font-size{
+    font-size: 2rem;
+}
+.nav-list{
+    margin-top: 0.9375rem;
+    margin-right: 0.3125rem;
+}
+.navbar-header > h1 {
+    text-align: left !important;
+}
+.carousel-container{
+    margin-bottom:1%; 
+    padding-bottom: 0.3125rem;
+    padding-top: 0.3125rem;
+}
+.about-parag-style{
+    margin: 5%;
+    border-radius: 0.3125rem;
+    border: 1px solid #D4A5A5 !important;
+}
