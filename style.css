@@ -251,3 +251,13 @@ img, .img-responsive{
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 480px) {
+  .mobile{
+    position: relative;
+    left: 50%;
+    margin-left: -50px !important; 
+    display: block;
+    padding-top: 0;
+  }
+}
