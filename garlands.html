@@ -18,8 +18,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <script src="action.js"></script>
 </head>
-<body>
+<body onload="generatePictureModals(9,'garlands/garland')">
 <header>
 <nav class="navbar text-center" id="header_container">
   <div class="container">
@@ -43,86 +44,7 @@
 
 <div class="container" id="imageContainer">
 </div>
-<div class="text-center">
-    <script>
-    var imageSize = 9,index = 1,loop = 0.0;
-    if((imageSize%3) == 0)
-    {
-        loop = imageSize/3;
-    }
-    else
-    {
-        loop = Math.floor(imageSize/3)+1;
-    }
 
-    var container = document.getElementById("imageContainer");
-    container.className ="container text-center";
-    var table = document.createElement("div");
-    table.id = "imageBorder";
-    document.getElementById("imageContainer").appendChild(table);
-    for (var i=0;i<loop; i++) 
-    {
-        var row = document.createElement("div")
-        row.className = "row";
-        for(var j=0; j<3;j++)
-        {
-            var col = document.createElement("div");
-            col.className = "col-md-4 hovereffect";
-            var img = new Image();
-            img.className = "img-responsive center-block";
-            if(index <= imageSize)
-            {
-                var temp = "garlands/garland"+index+'.jpg';
-                img.src = temp;
-                var imageId = "myImg"+index;
-                img.id = imageId;
-                col.appendChild(img);
-                row.appendChild(col);
-                table.appendChild(row);
-
-                var myModal = document.createElement("div");
-                myModal.className = "modal";
-                myModal.id = "myModal"+index;
-                var span = document.createElement("span");
-                span.className = "close";
-                span.textContent = "X";
-                var image = new Image();
-                image.className = "modal-content";
-                var modalImageId = "img"+ index;
-                image.id = modalImageId;
-                myModal.appendChild(span);
-                myModal.appendChild(image);
-                table.appendChild(myModal);
-                // Get the modal
-                var modal = document.getElementById('myModal'+index);
-
-                // Get the image and insert it inside the modal - use its "alt" text as a caption
-                var img1 = document.getElementById(imageId);
-                var modalImg = document.getElementById(modalImageId);
-                img1.onclick = function(){
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
-                }
-
-                // Get the <span> element that closes the modal
-                var spans = document.getElementsByClassName("close");
-                for ( var k = 0; k < spans.length; k++ ) {
-                  spans[k].addEventListener('click', function(event) {
-                    event.preventDefault();
-                    console.log("clicked", this);
-                    modal.style.display = "none";
-                  });
-                }
-                index++;
-            }
-            else{
-                break;
-            }
-        }
-    }
-    </script>
-</div>
-</div>
 <footer class="footer bg-6">
   <div class="container text-center">
     <a href="https://www.facebook.com/nhandmadecraft/"><i class="fa fa-facebook"></i></a>
